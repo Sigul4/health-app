@@ -1,0 +1,59 @@
+:host::ng-deep {
+  .primary {
+    &.expanded {
+      width: 100%;
+      .mdc-button__label {
+        color: white !important;
+      }
+      .mat-mdc-button-persistent-ripple {
+        &.mdc-button__ripple {
+          border-radius: 0px;
+          background-color: rgb(45, 45, 144);
+        }
+      }
+    }
+
+    &.not-expanded {
+      max-width: 200px;
+      .mdc-button__label {
+        color: white !important;
+      }
+      .mat-mdc-button-persistent-ripple {
+        &.mdc-button__ripple {
+          border-radius: 0px;
+          background-color: rgb(45, 45, 144);
+        }
+      }
+    }
+  }
+
+  .secondary {
+    &.expanded {
+      width: 100%;
+      .mdc-button__label {
+        color: rgb(75, 75, 75) !important;
+      }
+      .mat-mdc-button-persistent-ripple {
+        &.mdc-button__ripple {
+          border: 1px solid rgb(167, 167, 167);
+          border-radius: 0px;
+          background-color: rgba(167, 167, 167, 0.808);
+        }
+      }
+    }
+
+    &.not-expanded {
+      max-width: 200px;
+      .mdc-button__label {
+        color: rgb(75, 75, 75) !important;
+      }
+      .mat-mdc-button-persistent-ripple {
+        &.mdc-button__ripple {
+          border: 1px solid rgb(167, 167, 167);
+          border-radius: 0px;
+          background-color: rgba(167, 167, 167, 0.808);
+        }
+      }
+    }
+  }
+}

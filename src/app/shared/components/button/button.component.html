@@ -1,0 +1,10 @@
+<button
+  [class.expanded]="expanded"
+  [class.not-expanded]="!expanded"
+  [class.primary]="primary"
+  [class.secondary]="!primary"
+  mat-flat-button
+  color="primary"
+>
+  <ng-content></ng-content>
+</button>
