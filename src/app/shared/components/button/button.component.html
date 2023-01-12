@@ -1,0 +1,8 @@
+<button
+  [class.isFullWidth]="isFullWidth"
+  class="{{ btnSize }} {{ color }}"
+  mat-flat-button
+>
+  <mat-icon *ngIf="icon" [svgIcon]="icon"></mat-icon>
+  {{ text }}
+</button>

@@ -1,0 +1,105 @@
+@import "../../../../styles/colors";
+
+:host::ng-deep {
+  button {
+    width: 200px;
+    &.normal-height {
+      height: 36px;
+    }
+    &.small-height {
+      height: 20px;
+    }
+    &.isFullWidth {
+      width: 100%;
+    }
+  }
+  .primary {
+    &:hover {
+      .mat-mdc-button-persistent-ripple {
+        background-color: $primary-color__hover !important;
+      }
+    }
+    &:active {
+      .mat-mdc-button-persistent-ripple {
+        background-color: $primary-color__activity !important;
+      }
+    }
+    .mdc-button__label {
+      color: $white;
+    }
+    .mat-mdc-button-persistent-ripple {
+      &.mdc-button__ripple {
+        border-radius: 0px;
+        background-color: $primary-color;
+      }
+    }
+  }
+
+  .secondary {
+    &:hover {
+      .mat-mdc-button-persistent-ripple {
+        background-color: $secondary-color__hover !important;
+      }
+    }
+    &:active {
+      .mat-mdc-button-persistent-ripple {
+        background-color: $secondary-color__activity !important;
+      }
+    }
+    .mdc-button__label {
+      color: $dark-text-color;
+    }
+    .mat-mdc-button-persistent-ripple {
+      &.mdc-button__ripple {
+        border: 1px solid $secondary-border;
+        border-radius: 0px;
+        background-color: $secondary-color;
+      }
+    }
+  }
+
+  .transparent {
+    &:hover {
+      .mat-mdc-button-persistent-ripple {
+        background-color: $transparent-color__hover !important;
+      }
+    }
+    &:active {
+      .mat-mdc-button-persistent-ripple {
+        background-color: $transparent-color__activity !important;
+      }
+    }
+    .mdc-button__label {
+      color: $white;
+    }
+    .mat-mdc-button-persistent-ripple {
+      &.mdc-button__ripple {
+        border-radius: 0px;
+        background-color: $transparent-color;
+      }
+    }
+  }
+
+  .dark {
+    &:hover {
+      .mat-mdc-button-persistent-ripple {
+        background-color: $dark-color__hover !important;
+      }
+    }
+    &:active {
+      .mat-mdc-button-persistent-ripple {
+        background-color: $dark-color__activity !important;
+      }
+    }
+    width: fit-content;
+    .mdc-button__label {
+      color: $white;
+    }
+    .mat-mdc-button-persistent-ripple {
+      &.mdc-button__ripple {
+        border-radius: 0px;
+        background-color: $dark-color;
+      }
+    }
+  }
+}
