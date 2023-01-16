@@ -1,0 +1,21 @@
+<mat-form-field [class.error]="isError && !disabled" appearance="outline">
+  <input
+    matInput
+    #input="ngModel"
+    [type]="isPassword"
+    [(ngModel)]="value"
+    (ngModelChange)="onChange($event)"
+    [disabled]="disabled"
+    [placeholder]="placeholder"
+    [mask]="mask"
+  />
+  <button
+    matSuffix
+    mat-icon-button
+    *ngIf="isHideDeclared"
+    (click)="hide = !hide"
+  >
+    <mat-icon [fontIcon]="isHide"></mat-icon>
+  </button>
+  <mat-icon *ngIf="disabled" matSuffix svgIcon="lock"></mat-icon>
+</mat-form-field>

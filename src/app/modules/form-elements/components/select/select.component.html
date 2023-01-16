@@ -1,0 +1,22 @@
+<mat-form-field
+  class="custom-fonts"
+  [class.error]="isError && !disabled"
+  [class.prefix]="isPrefix"
+  appearance="fill"
+  appearance="outline"
+>
+  <mat-select
+    [(ngModel)]="selected"
+    (ngModelChange)="onChange($event)"
+    name="value"
+    [disabled]="disabled"
+  >
+    <mat-option
+      class="custom-option-fonts"
+      *ngFor="let value of values"
+      [value]="value.id"
+    >
+      <span>{{ value.name }}</span>
+    </mat-option>
+  </mat-select>
+</mat-form-field>

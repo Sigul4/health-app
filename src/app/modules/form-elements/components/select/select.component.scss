@@ -1,0 +1,41 @@
+@import "../../../../../styles/colors";
+
+::ng-deep {
+  .custom-fonts {
+    .mdc-menu-surface {
+      max-width: 100vw !important;
+    }
+    .mat-mdc-select-value {
+      font-family: $font-family !important;
+    }
+  }
+  .custom-option-fonts {
+    span {
+      font-family: $font-family !important;
+    }
+  }
+}
+
+:host::ng-deep {
+  .mat-mdc-form-field {
+    width: 100%;
+
+    .mat-mdc-text-field-wrapper {
+      height: 56px !important;
+    }
+
+    &.prefix {
+      width: 80px;
+    }
+
+    .mdc-text-field {
+      .mat-mdc-select-arrow {
+        svg {
+          width: 50px;
+          height: 50px;
+          left: auto;
+        }
+      }
+    }
+  }
+}

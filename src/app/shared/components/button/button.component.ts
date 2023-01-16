@@ -1,8 +1,5 @@
 import { Component, Input } from '@angular/core';
-import {
-  EColorButton,
-  ESizeButton,
-} from 'src/app/shared/components/button/enums/button-style.enums';
+import { EColorButton, ESizeButton } from './enums/button-style.enums';
 
 @Component({
   selector: 'app-button',
