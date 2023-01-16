@@ -1,0 +1,38 @@
+::ng-deep {
+  .user-menu {
+    margin-top: 12px !important;
+    border-radius: 0 0 15px 15px !important;
+    max-width: none !important;
+    width: 190px !important;
+  }
+}
+
+:host::ng-deep {
+  .user-inf {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: darkgray;
+    min-width: 190px;
+
+    img,
+    .user-photo {
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      background-color: gainsboro;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .mat-icon {
+        width: 25px;
+        height: 25px;
+        z-index: 2;
+        color: darkgray;
+      }
+    }
+    .mat-icon {
+      width: 12px;
+    }
+  }
+}

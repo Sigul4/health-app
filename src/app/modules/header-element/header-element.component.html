@@ -4,6 +4,11 @@
     <div class="button-group__wrapper" *ngIf="Tablet; else Mobile">
       <span class="link link-text"><a [routerLink]="['/']">About Us</a></span>
       <span class="link link-text"><a [routerLink]="['/']">Pricing</a></span>
+      <app-user-inf
+        class="link-text"
+        *ngIf="isLogin; else login"
+      ></app-user-inf>
+      <ng-template #login>
         <div class="button-group">
           <app-button
             [isFullWidth]="false"
@@ -18,6 +23,7 @@
             [color]="buttonColor.dark"
           ></app-button>
         </div>
+      </ng-template>
       <mat-icon [svgIcon]="'search'"></mat-icon>
     </div>
     <ng-template #Mobile>

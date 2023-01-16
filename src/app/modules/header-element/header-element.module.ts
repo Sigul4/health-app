@@ -6,10 +6,11 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
 import { ButtonComponent } from 'src/app/shared/components/button/button.component';
+import { UserInfComponent } from './components/user-inf/user-inf.component';
 import { HeaderElementComponent } from './header-element.component';
 
 @NgModule({
-  declarations: [ButtonComponent, HeaderElementComponent],
+  declarations: [UserInfComponent, ButtonComponent, HeaderElementComponent],
   imports: [
     CommonModule,
     MatButtonModule,
