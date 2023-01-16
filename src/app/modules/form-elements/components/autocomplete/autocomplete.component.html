@@ -2,20 +2,17 @@
   <input
     matInput
     #input="ngModel"
-    [type]="isPassword"
+    [type]="'text'"
     [(ngModel)]="value"
     (ngModelChange)="onChange($event)"
     [disabled]="disabled"
     [placeholder]="placeholder"
-    [mask]="mask"
+    [matAutocomplete]="auto"
   />
-  <button
-    matSuffix
-    mat-icon-button
-    *ngIf="isHideDeclared"
-    (click)="hide = !hide"
-  >
-    <mat-icon [fontIcon]="isHide"></mat-icon>
-  </button>
+  <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+    <mat-option *ngFor="let option of findOptions" [value]="option">
+      {{ option }}
+    </mat-option>
+  </mat-autocomplete>
   <mat-icon *ngIf="disabled" matSuffix svgIcon="lock"></mat-icon>
 </mat-form-field>

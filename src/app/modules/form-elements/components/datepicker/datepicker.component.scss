@@ -2,38 +2,12 @@
 
 :host::ng-deep {
   .mat-mdc-form-field {
-    width: 100%;
     .mdc-text-field {
       .mat-mdc-select-arrow {
         svg {
           width: 50px;
           height: 50px;
           left: auto;
-        }
-      }
-
-      &--disabled {
-        background: $input-disabled;
-      }
-
-      &--outlined {
-        .mdc-notched-outline {
-          .mdc-notched-outline__trailing,
-          .mdc-notched-outline__leading {
-            border-radius: 0px;
-          }
-        }
-      }
-    }
-  }
-
-  .error {
-    &.mat-mdc-form-field {
-      .mdc-text-field {
-        border-color: red;
-        .mdc-notched-outline__trailing,
-        .mdc-notched-outline__leading {
-          border-color: red !important;
         }
       }
     }

@@ -2,28 +2,32 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
-  Input
+  Input,
+  OnInit,
 } from '@angular/core';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
-  selector: 'app-datepicker',
-  templateUrl: './datepicker.component.html',
+  selector: 'app-autocomplete',
+  templateUrl: './autocomplete.component.html',
   styleUrls: [
-    './datepicker.component.scss',
+    './autocomplete.component.scss',
     '../../form-elements.component.scss',
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: DatePickerComponent,
+      useExisting: AutocompleteComponent,
       multi: true,
     },
   ],
 })
-export class DatePickerComponent {
+export class AutocompleteComponent implements ControlValueAccessor, OnInit {
+  @Input() public placeholder!: string;
   @Input() public disabled: boolean;
+  @Input() public isError: boolean;
+  @Input() public findOptions: string[];
 
   public value: string;
   public onChange = (value: string): void => {};
