@@ -1,0 +1,29 @@
+<mat-toolbar class="header">
+  <div class="header-content">
+    <mat-icon [svgIcon]="'logo'"></mat-icon>
+    <div class="button-group__wrapper" *ngIf="Tablet; else Mobile">
+      <span class="link link-text"><a [routerLink]="['/']">About Us</a></span>
+      <span class="link link-text"><a [routerLink]="['/']">Pricing</a></span>
+        <div class="button-group">
+          <app-button
+            [isFullWidth]="false"
+            text="Sign In"
+            [btnSize]="buttonSize.normal"
+            [color]="buttonColor.dark"
+          ></app-button>
+          <app-button
+            [isFullWidth]="false"
+            text="Registration"
+            [btnSize]="buttonSize.normal"
+            [color]="buttonColor.dark"
+          ></app-button>
+        </div>
+      <mat-icon [svgIcon]="'search'"></mat-icon>
+    </div>
+    <ng-template #Mobile>
+      <button class="burger-button">
+        <mat-icon [svgIcon]="'hamburger-menu'"></mat-icon>
+      </button>
+    </ng-template>
+  </div>
+</mat-toolbar>

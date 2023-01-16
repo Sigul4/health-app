@@ -1,0 +1,53 @@
+::ng-deep {
+  .link-text {
+    span,
+    a {
+      color: gray !important;
+      font-size: 16px !important;
+      font-weight: 500 !important;
+      text-decoration: none !important;
+    }
+  }
+}
+
+:host {
+  .header {
+    display: flex;
+    justify-content: center;
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 1200px;
+      .mat-icon {
+        height: 35px;
+        width: 110px;
+      }
+      .button-group__wrapper {
+        display: flex;
+        width: 410px;
+        justify-content: space-evenly;
+        align-items: center;
+        .link {
+          margin: 0 10px;
+        }
+        .button-group {
+          display: flex;
+          width: 230px;
+          justify-content: space-evenly;
+        }
+        .mat-icon {
+          height: 40px;
+          width: 20px;
+        }
+      }
+      .burger-button {
+        border: 0;
+        background: none;
+        .mat-icon {
+          width: 30px;
+        }
+      }
+    }
+  }
+}
