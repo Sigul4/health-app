@@ -1,0 +1,65 @@
+@import "../../../../../styles/colors";
+
+::ng-deep {
+  .mdc-menu-surface {
+    max-width: 100vw !important;
+  }
+  .mat-mdc-select-value,
+  .mat-mdc-option {
+    font-family: "NotoColorEmojiLimited", -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol" !important;
+  }
+}
+
+:host::ng-deep {
+  .mat-mdc-form-field {
+    width: 100%;
+
+    .mat-mdc-text-field-wrapper {
+      height: 56px !important;
+    }
+
+    &.prefix {
+      width: 80px;
+    }
+
+    .mdc-text-field {
+      .mat-mdc-select-arrow {
+        svg {
+          width: 50px;
+          height: 50px;
+          left: auto;
+        }
+      }
+
+      &--disabled {
+        background: $input-disabled;
+      }
+
+      &--outlined {
+        .mdc-notched-outline {
+          .mdc-notched-outline__trailing,
+          .mdc-notched-outline__leading {
+            border-radius: 0px;
+          }
+        }
+      }
+    }
+  }
+
+  .error {
+    &.mat-mdc-form-field {
+      .mdc-text-field {
+        .mat-mdc-select-arrow {
+          color: red;
+        }
+        border-color: red;
+        .mdc-notched-outline__trailing,
+        .mdc-notched-outline__leading {
+          border-color: red !important;
+        }
+      }
+    }
+  }
+}
