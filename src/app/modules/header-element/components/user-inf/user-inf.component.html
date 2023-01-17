@@ -1,0 +1,15 @@
+<div class="user-inf" [matMenuTriggerFor]="belowMenu">
+  <div class="user-photo">
+    <img *ngIf="user.avaLink; else anon" [src]="user.avaLink" />
+    <ng-template #anon>
+      <mat-icon [svgIcon]="'empty-user'"></mat-icon>
+    </ng-template>
+  </div>
+  <span>{{ user.username | slice : 0 : 10 }}</span>
+  <mat-icon [svgIcon]="'arrow-down'"></mat-icon>
+</div>
+<mat-menu class="user-menu link-text" #belowMenu="matMenu" yPosition="below">
+  <span mat-menu-item class="link"><a [routerLink]="['/']">Edit Profile</a></span>
+  <span mat-menu-item class="link"><a [routerLink]="['/']">View Profile</a></span>
+  <span mat-menu-item class="link"><a [routerLink]="['/']">Log Out</a></span>
+</mat-menu>

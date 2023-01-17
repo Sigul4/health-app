@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { ButtonComponent } from './components/button/button.component';
+import { ButtonComponent } from 'src/app/shared/components/button/button.component';
 
 const imports = [CommonModule, MatListModule, MatIconModule];
 
